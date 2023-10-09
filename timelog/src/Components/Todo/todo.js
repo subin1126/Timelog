@@ -59,8 +59,8 @@ function Todo() {
         {todoList.map((item, index) => (
           <li className={item.isCompleted === true ? 'completed' : ''}>
             <span>{item.value}</span>
-            <button onClick={handleCompletedClick.bind(null, index)}>완료</button>
-            <button onClick={handleRemoveClick.bind(null, index)}>삭제</button>
+            <button onClick={() => handleCompletedClick(index)}>완료</button>
+            <button onClick={() => handleRemoveClick(index)}>삭제</button>
           </li>
         ))}
       </ol>
